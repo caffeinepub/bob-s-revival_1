@@ -87,8 +87,6 @@ export default function App() {
   }, []);
 
   const currentYear = new Date().getFullYear();
-  const footerLink = `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(window.location.hostname)}`;
-
   return (
     <div
       className="relative min-h-screen overflow-x-hidden select-none"
@@ -536,27 +534,6 @@ export default function App() {
             className="h-px w-16 mx-auto mb-4"
             style={{ background: "oklch(0.52 0.22 25 / 0.3)" }}
           />
-
-          <p className="text-xs" style={{ color: "oklch(0.30 0.02 40)" }}>
-            Built with <span style={{ color: "oklch(0.52 0.22 25)" }}>♥</span>{" "}
-            using{" "}
-            <a
-              href={footerLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-ocid="footer.link"
-              className="transition-colors duration-200"
-              style={{ color: "oklch(0.45 0.03 40)" }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "oklch(0.62 0.26 25)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "oklch(0.45 0.03 40)";
-              }}
-            >
-              caffeine.ai
-            </a>
-          </p>
         </div>
       </footer>
 
